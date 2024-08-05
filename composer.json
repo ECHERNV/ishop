@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/ishop.ru",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Chernavin",
+      "email": "chernavinj@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "chrn\\": "vendor/chrn",
+      "app\\": "app"
+    }
+  },
+  "require": {
+  }
+}
