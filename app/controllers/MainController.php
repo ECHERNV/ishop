@@ -2,10 +2,13 @@
 
 namespace app\controllers;
 
-class MainController
+use chrn\Controller;
+
+class MainController extends Controller
 {
     public function indexAction()
     {
+        var_dump($this->model);
         echo __METHOD__;
     }
 }

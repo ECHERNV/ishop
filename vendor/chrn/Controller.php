@@ -21,4 +21,12 @@ abstract class Controller
 
     }
 
+    public function getModel()
+    {
+        $model = 'app\models\\' . $this->route['admin-prefix'] . $this->route['controller'];
+        if (class_exists($model)) {
+            $this->model = new $model();
+        }
+    }
+
 }
