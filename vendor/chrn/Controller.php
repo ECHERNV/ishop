@@ -29,4 +29,26 @@ abstract class Controller
         }
     }
 
+    public function getView()
+    {
+        $this->view = $this->view ?: $this->route['action'];
+    }
+
+    public function set($data)
+    {
+        $this->data = $data;
+    }
+
+    public function setMeta($title = '', $description = '', $keywords = '')
+    {
+        $this->meta = [
+            'title' => $title,
+            'description' => $description,
+            'keywords' => $keywords
+        ];
+    }
+
+
+
+
 }
