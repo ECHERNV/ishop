@@ -13,5 +13,3 @@ new \chrn\App();
 //var_dump(\chrn\App::$app->getProperties());
 
 //throw new Exception('Возникла ошибка!');
-
-debug(\chrn\Router::getRoutes());
