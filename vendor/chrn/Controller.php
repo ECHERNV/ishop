@@ -5,10 +5,6 @@ namespace chrn;
 abstract class Controller
 {
 
-
-
-
-
     public array $data = [];
     public array $meta = ['title' => '', 'description' => '', 'keywords' => ''];
     public false|string $layout = '';
