@@ -57,11 +57,11 @@ class View
     public function getDbLogs()
     {
         if(DEBUG) {
-            $logs = R::getDatabaseAdapter()
-                ->getDatabase()
-                ->getLogger();
-            $logs = array_merge($logs->grep('SELECT'), $logs->grep('DELETE'), $logs->grep('INSERT'),$logs->grep('UPDATE'));
-            debug($logs);
+                $logs = R::getDatabaseAdapter()
+                    ->getDatabase()
+                    ->getLogger();
+                $logs = array_merge($logs->grep('SELECT'), $logs->grep('DELETE'), $logs->grep('INSERT'),$logs->grep('UPDATE'));
+                debug($logs);
         }
     }
 

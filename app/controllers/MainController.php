@@ -7,11 +7,17 @@ use chrn\Controller;
 use RedBeanPHP\R;
 
 
+/**@property Main $model */
 class MainController extends AppController
 {
     public function indexAction()
     {
         $slides = R::findAll('slider');
-        $this->set(compact('slides'));
+
+        $products = $this->model->get_hits(1, 3);
+
+        $this->set(compact('slides', 'products'));
+
+        $this->setMeta( 'Title', 'Pidor', 'qweqwewq');
     }
 }

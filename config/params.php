@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'admin_email' => 'admin@ishop.ru',
-    'site_name' => 'ishop',
+    'admin_email' => 'admin@johnny.ru',
+    'site_name' => 'JohnnyShop',
     'pagination' => '3',
 ];
