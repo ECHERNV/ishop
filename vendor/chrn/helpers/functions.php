@@ -23,3 +23,8 @@ function redirect($http = false)
     header("location: $redirect");
     die;
 }
+
+function base_url()
+{
+    return PATH . '/' . (\chrn\App::$app->getProperty('lang') ? \chrn\App::$app->getProperty('lang') . '/' : '');
+}

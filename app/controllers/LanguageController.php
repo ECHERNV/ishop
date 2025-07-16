@@ -18,7 +18,6 @@ class LanguageController extends AppController
 
                 // разбиваю на 2 части. 1 - возможный язык,
                 $url_parts = explode('/', $url, 2);
-                var_dump($url,$url_parts);
 
                 // ищу первую часть (старый язык) в массиве языков
                 if (array_key_exists($url_parts[0], App::$app->getProperty('languages'))) {
@@ -36,7 +35,9 @@ class LanguageController extends AppController
                         array_unshift($url_parts, $lang);
                     }
                 }
-                var_dump($url,$url_parts); die;
+
+                    $url = PATH . '/' . implode('/', $url_parts);
+                    redirect($url);
             }
         }
         redirect();
